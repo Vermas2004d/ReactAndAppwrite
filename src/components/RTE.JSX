@@ -11,9 +11,10 @@ export default function RTE({name, control, label, defaultValue =""}) {
     <Controller
     name={name || "content"}
     control={control}
-    render={({field: {onChange}}) => (
+    render={({field: {onChange , value}}) => (
         <Editor
         initialValue={defaultValue}
+        value={value}
         init={{
             initialValue: defaultValue,
             height: 500,
@@ -24,7 +25,6 @@ export default function RTE({name, control, label, defaultValue =""}) {
                 "autolink",
                 "lists",
                 "link",
-                "image",
                 "charmap",
                 "preview",
                 "anchor",
@@ -38,7 +38,6 @@ export default function RTE({name, control, label, defaultValue =""}) {
                 "code",
                 "help",
                 "wordcount",
-                "anchor",
             ],
             toolbar:
             "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",

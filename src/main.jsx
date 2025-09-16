@@ -12,12 +12,12 @@ import AddPost from "./pages/AddPost.jsx"
 import Signup from "./pages/Signup.jsx"
 import EditPost from "./pages/EditPost.jsx"
 import Post from "./pages/Post.jsx"
-
+import Login from "./pages/Login.jsx"
 import AllPosts from "./pages/AllPosts.jsx"
 
 
 
-const router = createBrowserRouter([
+const route = createBrowserRouter([
   {
     path: "/",
     element: <App />,
